@@ -626,7 +626,7 @@ func loadAvatar(userID: String) -> Future<UIImage, UserInfoErrorDomain> {
 
 ## Follow-up Resources
 
-- Playground: https://github.com/JaviSoto/Presentations/tree/Future-SwiftSummit/
+- Playground: https://github.com/JaviSoto/Talks
 - ReactiveCocoa: https://github.com/ReactiveCocoa/ReactiveCocoa
 - Railway Oriented Programming: http://fsharpforfunandprofit.com/posts/recipe-part2/
 
