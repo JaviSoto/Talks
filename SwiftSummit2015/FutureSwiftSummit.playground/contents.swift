@@ -3,7 +3,7 @@
 import UIKit
 import XCPlayground
 
-XCPSetExecutionShouldContinueIndefinitely(continueIndefinitely: true)
+XCPSetExecutionShouldContinueIndefinitely(true)
 
 //: # Swift Future API
 
@@ -28,7 +28,7 @@ public enum Result<T, E: ErrorType> {
     case Error(Box<E>)
 }
 
-extension Result: DebugPrintable {
+extension Result: CustomDebugStringConvertible {
     public var debugDescription: String {
         switch self {
             case .Success(let valueBox):
@@ -143,7 +143,7 @@ enum UserInfoErrorDomain: ErrorType {
     case NetworkRequestFailure
 }
 
-extension UserInfoErrorDomain: DebugPrintable {
+extension UserInfoErrorDomain: CustomDebugStringConvertible {
     var debugDescription: String {
         switch self {
             case .UserDoesNotExist: return "UserDoesNotExist"
@@ -206,5 +206,5 @@ let avatarError = loadAvatar("invalidUser").mapError { _ in
 }
 
 avatarError.start() { result in
-    println(result)
+    print(result)
 }
