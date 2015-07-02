@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>958C3A1A-8060-4DC4-A093-D440F03C955E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FutureSwiftSummit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6B3784898021E6E7F14F2C26BEE8AEE65B8E1130</key>
+		<string>bitbucket.org:JaviSoto/presentations.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SwiftSummit/FutureSwiftSummit.playground</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6B3784898021E6E7F14F2C26BEE8AEE65B8E1130</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>bitbucket.org:JaviSoto/presentations.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6B3784898021E6E7F14F2C26BEE8AEE65B8E1130</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6B3784898021E6E7F14F2C26BEE8AEE65B8E1130</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Presentations</string>
+		</dict>
+	</array>
+</dict>
+</plist>

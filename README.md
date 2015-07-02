@@ -10,3 +10,7 @@ Presentation on the problems with traditional asynchronous, callback-based APIs 
 ## [RACDC 2015]((https://github.com/ReactiveCocoa/ReactiveCocoa/issues/1909)): RAC3, A Real World Use Case (aka ReactiveChess)
 Overview of how [WatchChess](http://www.watchchessapp.com) was implemented using ReactiveCocoa 3.0, sharing a few tricks that I learned during its development.
 - [Slides](https://speakerdeck.com/javisoto/rac3-a-real-world-use-case-aka-reactivechess)
+
+## [NSMeetup San Francisco - July 2015]((http://www.meetup.com/nsmeetup/events/223263035/)): Swift Sync and Async Error Handling
+Showing some of the problems with traditional synchronous and asynchronous error handling in Objective-C, and how we can do better in Swift with `Result`, some kind of `Future` API, and comparing it with the new Swift 2 `throws` syntax.
+- [Slides](https://speakerdeck.com/javisoto/nsmeetup-san-francisco-july-2015)
