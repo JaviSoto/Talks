@@ -295,7 +295,7 @@ let contents: NSData? = try? readFile("path/to/my/file")
 ## Swift's `throws`
 
 ```swift
-func readFile(path: String) -> Result<NSData, FoundationError>
+func readFile(path: String) -> Result<NSData, FileIOError>
 
 let file = readFile("path/to/my/file")
 
@@ -326,7 +326,7 @@ func readFile(path: String) throws FileIOError -> NSData
 
 ---
 
-# Error handling in Asynchronous APIs
+## Error handling in Asynchronous APIs
 
 ^ - So now let's talk about the asynchronous case, which is always much more complicated.
 - It's important to note that Swift2's new error handling feature is designed to work with synchronous APIs: methods that either return something, or send an error.
@@ -457,7 +457,7 @@ func map<U>(f: T -> U) -> Future<U, E> {
     // Return a new Future w/ a new operation...
     return Future<U, E>(operation: { completion in
 
-    }
+    })
 }
 ```
 
@@ -475,7 +475,7 @@ func map<U>(f: T -> U) -> Future<U, E> {
         self.start { result in
 
         }
-    }
+    })
 }
 ```
 
@@ -603,7 +603,7 @@ func andThen<U>(f: T -> Future<U, E>) -> Future<U, E> {
         self.start { firstFutureResult in
 
         }
-    }
+    })
 }
 
 ```
@@ -623,7 +623,7 @@ func andThen<U>(f: T -> Future<U, E>) -> Future<U, E> {
                 case let .Failure(error): // ...
             }
         }
-    }
+    })
 }
 
 ```
@@ -734,8 +734,8 @@ func loadAvatar(userID: String) -> Future<UIImage, UserInfoErrorDomain> {
 
 ---
 
-# Mixing it all up
-## `Result<T, E>` and `throws`
+## Mixing it all up
+### `Result<T, E>` and `throws`
 
 ^ - I've shown the now pretty standard `Result` type, and an example implementation of a bare-bones `Future` API.
 - But it doesn't make sense to ignore Swift2's error handling features. They're going to be with us, so we have to embrace them.
@@ -791,7 +791,7 @@ let avatarFuture = loadAvatar("4815162342")
 
 avatarFuture.start { result in
   do {
-    let avatar = result.materialize()
+    let avatar = try result.materialize()
   }
   catch {
     // handle `error`
@@ -815,9 +815,9 @@ avatarFuture.start { result in
 
 ---
 
-# ReactiveCocoa
+## ReactiveCocoa
 
-## Signals > Futures
+### Signals > Futures
 
 ^ - Signals are in a way a superset of Futures, and therefore they're a more useful abstraction.
 - They make RAC an incredibly powerful tool.
