@@ -20,3 +20,8 @@ Showing some of the problems with traditional synchronous and asynchronous error
 Showing some of the problems with traditional synchronous and asynchronous error handling in Objective-C, and how we can do better in Swift with `Result`, some kind of `Future` API, and comparing it with the new Swift 2 `throws` syntax.
 - [Slides](https://speakerdeck.com/javisoto/ios-conf-singapore-october-2015)
 - [Video](https://www.youtube.com/watch?v=mbd6g7NfR-8)
+
+## [Swift Summit San Francisco - October 2015](http://swiftsummit.com): Asynchronous Code with ReactiveCocoa
+Introduction to the ideas behind ReactiveCocoa, and why they're valuable.
+- [Slides](https://speakerdeck.com/javisoto/swift-summit-san-francisco-october-2015)
+- Video TBD
