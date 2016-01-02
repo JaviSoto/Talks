@@ -791,7 +791,7 @@ let avatarFuture = loadAvatar("4815162342")
 
 avatarFuture.start { result in
   do {
-    let avatar = try result.materialize()
+    let avatar = try result.dematerialize()
   }
   catch {
     // handle `error`
