@@ -24,4 +24,4 @@ Showing some of the problems with traditional synchronous and asynchronous error
 ## [Swift Summit San Francisco - October 2015](http://swiftsummit.com): Asynchronous Code with ReactiveCocoa
 Introduction to the ideas behind ReactiveCocoa, and why they're valuable.
 - [Slides](https://speakerdeck.com/javisoto/swift-summit-san-francisco-october-2015)
-- Video TBD
+- [Video](https://www.youtube.com/watch?v=Ent6LJDIB3I)
