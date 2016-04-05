@@ -195,7 +195,8 @@ func loadAvatar(userID: String) -> Future<UIImage, UserInfoErrorDomain> {
 - Responder chain
 - Callback blocks
 
-^ - ReactiveCocoa unifies all of these things of all these under one umbrella. One API to understand. It takes a while, but once you get it, that’s all you need to know. None of us learned all of these concepts overnight!
+^ - These are all concepts that at some point we had to learn in order to use Cocoa APIs. This is a LONG list! And while each of these are slightly different, they kind of solve similar problems around asynchronous data flow.
+- ReactiveCocoa unifies all of these things of all these under one umbrella. One API to understand. It takes a while, but once you get it, that’s all you need to know. None of us learned all of these concepts overnight!
 
 ---
 
