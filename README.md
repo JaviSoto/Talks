@@ -25,3 +25,8 @@ Showing some of the problems with traditional synchronous and asynchronous error
 Introduction to the ideas behind ReactiveCocoa, and why they're valuable.
 - [Slides](https://speakerdeck.com/javisoto/swift-summit-san-francisco-october-2015)
 - [Video](https://www.youtube.com/watch?v=Ent6LJDIB3I)
+
+## [Swift User Group - April 2016](http://www.meetup.com/swift-language/events/229694736/): Building Fabric.app in Swift
+Collection to tidbits about the things I learned while building the Fabric app
+- [Slides](https://speakerdeck.com/javisoto/swift-user-group-april-2016-building-fabric-dot-app-in-swift)
+- Video TBD
