@@ -5,6 +5,7 @@ autoscale: true
 # [fit] Building Fabric.app in Swift
 
 ^ - Welcome!
+- Thanks for coming! I love what Realm does for the Swift community hosting these meetups, and I'm super humbled that I get to speak here.
 
 ---
 
@@ -24,7 +25,8 @@ autoscale: true
 
 ![inline](Images/meme.jpg)
 
-^ - This is also me
+^ - This is also me.
+- I love talking about Swift, so I'm really happy to be here.
 
 ----
 
@@ -124,7 +126,8 @@ autoscale: true
 - Less work to integrate frameworks
 - Easily link some frameworks only in Debug
 
-^ - Let's work to integrate since it sets up the Xcode project for you.
+^ - First, Cocoapods.
+- Cocoapods libraries are easier to integrate since it sets up the Xcode project for you.
 - But to me the biggest win is to easily add a dependency only on debug builds. We use this a ton to add some tools that help us during development, but don't wanna ship in the final binary.
 
 ----
@@ -133,28 +136,23 @@ autoscale: true
 
 - Precompilation == Speed
 
-^ - This is THE reason we use Carthage for some dependencies.
+^ - But we also use Carthage. This is THE reason we use Carthage for some dependencies: app compilation speed.
 - The Swift compiler is not as fast as the Obj-C compiler. While it may get better, I believe this may always hold true, and pre-compiling code that you're not constantly changing is a great idea.
+- Unfortunately there's been Xcode and lldb issues related to pre-compiling Swift libraries outside of the main Xcode project for over a year now, so this definitely comes with trade-offs.
 
 ----
 
 ### Swift Package Manager
 
-^ - In the near future, I can't wait to move everything over to SPM, as soon Xcode integration is in good shape.
+^ - In the near future, I can't wait to move everything over to SPM, as soon as the Xcode integration is in good shape.
 
 ---
 
 ### Interface Builder
 
----
-
-### Interface Builder
-
-- AutoLayout
-- Storyboards?
-- robb/Cartography
-
-^ - I'm a big fan of IB. There's very very little layout code in the Fabric app. Only some views that must dynamically create constraints, and we use Cartography for that.
+^ - Next: Interface Builder. I'm a big fan of IB.
+-  There's very very little layout code in the Fabric app. Only some views that must dynamically create constraints, and we use the Cartography library for that.
+- Being able to set up AutoLayout constraints in Interface Builder greatly reduces the amount of UI code we need to write in the app.
 
 ----
 
@@ -412,7 +410,7 @@ return GenericTableViewDataSource(
 
 # Better with Swift
 
-^ - Next, I want to talk about 3 things that I love about Swift that were a huge help in building the first big app I work on in Swift, after years of Obj-C.
+^ - Next, I want to mention about 3 things that I love about Swift that were a huge help in building the first big app I work on in Swift, after years of Obj-C.
 
 ----
 
