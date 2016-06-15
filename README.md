@@ -30,3 +30,7 @@ Introduction to the ideas behind ReactiveCocoa, and why they're valuable.
 Collection to tidbits about the things I learned while building the Fabric app
 - [Slides](https://speakerdeck.com/javisoto/swift-user-group-april-2016-building-fabric-dot-app-in-swift)
 - Video TBD
+
+## [RACDC 2016](https://github.com/ReactiveCocoa/ReactiveCocoa/issues/2824): Building Fabric.app with ReactiveCocoa
+Overview of how the Fabric App was built by taking advantage of some of ReactiveCocoa's features.
+- [Slides](https://speakerdeck.com/javisoto/building-fabric-dot-app-with-reactivecocoa)
