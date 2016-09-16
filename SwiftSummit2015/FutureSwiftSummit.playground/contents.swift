@@ -3,19 +3,11 @@
 import UIKit
 import XCPlayground
 
-XCPSetExecutionShouldContinueIndefinitely(continueIndefinitely: true)
+XCPSetExecutionShouldContinueIndefinitely(true)
 
 //: # Swift Future API
 
 //: ## Types
-
-public final class Box<T> {
-    public let unbox: T
-
-    init(_ value: T) {
-        self.unbox = value
-    }
-}
 
 public protocol ErrorType { }
 
@@ -24,17 +16,18 @@ public enum NoError: ErrorType { }
 extension NSError: ErrorType { }
 
 public enum Result<T, E: ErrorType> {
-    case Success(Box<T>)
-    case Error(Box<E>)
+    case Success(T)
+    case Error(E)
+    
 }
 
-extension Result: DebugPrintable {
+extension Result: CustomDebugStringConvertible {
     public var debugDescription: String {
         switch self {
-            case .Success(let valueBox):
-                return "Success: \(toString(valueBox.unbox))"
-            case .Error(let errorBox):
-                return "Error: \(toString(errorBox.unbox))"
+            case .Success(let value):
+                return "Success: \(String(value))"
+            case .Error(let error):
+                return "Error: \(String(error))"
         }
     }
 }
@@ -58,11 +51,11 @@ public struct Future<T, E: ErrorType> {
     }
 
     public init(value: T) {
-        self.init(result: .Success(Box(value)))
+        self.init(result: .Success(value))
     }
 
     public init(error: E) {
-        self.init(result: .Error(Box(error)))
+        self.init(result: .Error(error))
     }
 
     public init(operation: AsyncOperation) {
@@ -83,8 +76,8 @@ extension Future {
         return Future<U, E>(operation: { completion in
             self.start { result in
                 switch result {
-                    case .Success(let valueBox): completion(Result.Success(Box(f(valueBox.unbox))))
-                    case .Error(let errorBox): completion(Result.Error(errorBox))
+                    case .Success(let value): completion(Result.Success(f(value)))
+                    case .Error(let error): completion(Result.Error(error))
                 }
             }
         })
@@ -94,8 +87,8 @@ extension Future {
         return Future<U, E>(operation: { completion in
             self.start { firstFutureResult in
                 switch firstFutureResult {
-                    case .Success(let valueBox): f(valueBox.unbox).start(completion)
-                    case .Error(let errorBox): completion(Result.Error(errorBox))
+                    case .Success(let value): f(value).start(completion)
+                    case .Error(let error): completion(Result.Error(error))
                 }
             }
         })
@@ -107,8 +100,8 @@ extension Future {
         return Future<T, F>(operation: { completion in
             self.start { result in
                 switch result {
-                    case .Success(let valueBox): completion(Result.Success(valueBox))
-                    case .Error(let errorBox): completion(Result.Error(Box(f(errorBox.unbox))))
+                    case .Success(let value): completion(Result.Success(value))
+                    case .Error(let error): completion(Result.Error(f(error)))
                 }
             }
         })
@@ -143,7 +136,7 @@ enum UserInfoErrorDomain: ErrorType {
     case NetworkRequestFailure
 }
 
-extension UserInfoErrorDomain: DebugPrintable {
+extension UserInfoErrorDomain: CustomDebugStringConvertible {
     var debugDescription: String {
         switch self {
             case .UserDoesNotExist: return "UserDoesNotExist"
@@ -159,10 +152,10 @@ func downloadFile(URL: NSURL) -> Future<NSData, UserInfoErrorDomain> {
             let result: Result<NSData, UserInfoErrorDomain>
 
             if let data = NSData(contentsOfURL: URL) {
-                result = Result.Success(Box(data))
+                result = Result.Success(data)
             }
             else {
-                result = Result.Error(Box(.NetworkRequestFailure))
+                result = Result.Error(.NetworkRequestFailure)
             }
 
             completion(result)
@@ -195,9 +188,9 @@ let avatarFuture = loadAvatar("javi")
 avatarFuture.start() { result in
     switch result {
         case .Success(let image):
-            image.unbox
+            image
         case .Error(let error):
-            error.unbox
+            error
     }
 }
 
@@ -206,5 +199,5 @@ let avatarError = loadAvatar("invalidUser").mapError { _ in
 }
 
 avatarError.start() { result in
-    println(result)
+    print(result)
 }
