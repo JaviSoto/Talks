@@ -34,3 +34,8 @@ Collection to tidbits about the things I learned while building the Fabric app
 ## [RACDC 2016](https://github.com/ReactiveCocoa/ReactiveCocoa/issues/2824): Building Fabric.app with ReactiveCocoa
 Overview of how the Fabric App was built by taking advantage of some of ReactiveCocoa's features.
 - [Slides](https://speakerdeck.com/javisoto/building-fabric-dot-app-with-reactivecocoa)
+
+## [NSSpain 2016](http://2016.nsspain.com/): Building Fabric.app in Swift
+Overview of some of the technical decisions made during the development of the Fabric app for iOS.
+- [Slides](https://speakerdeck.com/javisoto/nsspain-2016-building-fabric-dot-app-in-swift)
+- [Video] TBD
