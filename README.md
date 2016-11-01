@@ -39,3 +39,9 @@ Overview of how the Fabric App was built by taking advantage of some of Reactive
 Overview of some of the technical decisions made during the development of the Fabric app for iOS.
 - [Slides](https://speakerdeck.com/javisoto/nsspain-2016-building-fabric-dot-app-in-swift)
 - [Video] TBD
+
+## [Swift Summit San Francisco - November 2016](https://www.swiftsummit.com/): Rubik's Cubes and Genetic Algorithms in Swift
+Genetic Algorithms are a fascinating way of solving problems in computer science which lie in between programming and biology. I implemented one in Swift to solve Rubik's Cubes, and you won't believe what happened next.
+- [Slides](https://speakerdeck.com/javisoto/rubiks-cubes-and-genetic-algorithms-in-swift)
+- [Playground](https://github.com/JaviSoto/Talks/blob/master/SwiftSummitSF2016/Playground/BinaryGenetics.playground?raw=true)
+- [Video] TBD
