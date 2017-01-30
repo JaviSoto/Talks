@@ -44,4 +44,4 @@ Overview of some of the technical decisions made during the development of the F
 Genetic Algorithms are a fascinating way of solving problems in computer science which lie in between programming and biology. I implemented one in Swift to solve Rubik's Cubes, and you won't believe what happened next.
 - [Slides](https://speakerdeck.com/javisoto/rubiks-cubes-and-genetic-algorithms-in-swift)
 - [Playground](https://github.com/JaviSoto/Talks/blob/master/SwiftSummitSF2016/Playground/BinaryGenetics.playground.zip?raw=true)
-- [Video] TBD
+- [Video](https://www.skilled.io/u/swiftsummit/rubik-s-cubes-and-genetic-algorithms-in-swift)
