@@ -1,9 +1,10 @@
-footer: "​Optimizing Swift code for separation of concerns and simplicity." - @Javi
+footer: "​Optimizing Swift code for separation of concerns and simplicity." "関心の分離と単純化のためのSwiftコードの最適化" - @Javi
 slidenumbers: true
 autoscale: true
 theme: Libre, 1
 
 # Optimizing Swift code for separation of concerns and simplicity
+### 関心の分離と単純化のためのSwiftコードの最適化
 
 ---
 
@@ -19,30 +20,35 @@ theme: Libre, 1
 
 ----
 
-# Coding Principles
+## Coding Principles
+### コーディングの原則
 
 ^ - At Twitch, I work with a fairly big team of 10 iOS engineers. I would say that one of my biggest responsibilities is code reviewing.
 - I love code reviewing because it's a great way to learn from one another. I review a lot of code because I like to help keep a high bar of quality in our codebase. And at the same time I also learn a lot by reading my coworkers' code.
 
 ----
 
-# Coding Principles
-### - Simplicity
-### - Conciseness
-### - Clarity
+## Coding Principles
+### コーディングの原則<br><br>
+### - Simplicity / 単純
+### - Conciseness / 簡潔
+### - Clarity / 明確
 
 ^ - These are some of the principles that I abide by and try to optimize for when I provide code review feedback. They also happen to be core tenets of Swift, which is great.
 - In today's short talk I wanted to show some examples of different tips and tricks that I have found to really help when optimizing for simplicity in the code that we write. You may already know some of them, but I hope you can still take some ideas away from this talk.
-- We often talk about high level architecture patterns, but it's more rare that we think about optimizing the way we write code locally, how to make function and classes easier to understand and follow. That's what I'd like to focus on today.
+- We often talk about high level architecture patterns, but it's more rare that we think about optimizing the way we write code locally, how to make functions and classes easier to understand and follow. That's what I'd like to focus on today.
 
 ---
 
 [.build-lists: true]
 
-# Separation of Concerns
+## Separation of Concerns
+### 関心の分離<br><br>
 
 ### - Code is read much more often than it is written
+### コードは書かれることよりも読まれることの方が多い<br><br>
 ### - Separating the *"what"* from the *"how"*
+###   *How* から *what* を切り離す
 
 ^ - One of the things I like to remind myself of is that we read code many more times than we write it, so taking a bit of extra time to make it simple we can make it easier for other people, and our future selves, to understand it. Sometimes we want to get something done and working quickly, maybe because we can't wait to get it in front of our users. So the question I like to ask myself is: "will I understand what this code was trying to do when I read it again some time in the future".
 - It's hard to answer that question as you're writing some code, because at that time you probably have a good understanding of what it does. But learning to critically answer that question helps develop empathy for other people as well.
@@ -641,6 +647,7 @@ final class ProfileViewController: UIViewController {
 # Summary
 
 ### - Value in optimizing readability in local scopes
+### ローカルスコープの可読性の最適化には価値がある<br>
 ### - DRY (Don't Repeat Yourself)
 ### - Swift enums are awesome
 
