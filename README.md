@@ -45,3 +45,8 @@ Genetic Algorithms are a fascinating way of solving problems in computer science
 - [Slides](https://speakerdeck.com/javisoto/rubiks-cubes-and-genetic-algorithms-in-swift)
 - [Playground](https://github.com/JaviSoto/Talks/blob/master/SwiftSummitSF2016/Playground/BinaryGenetics.playground.zip?raw=true)
 - [Video](https://www.skilled.io/u/swiftsummit/rubik-s-cubes-and-genetic-algorithms-in-swift)
+
+## [try! Swift Tokyo - March 2018](https://www.tryswift.co/events/2018/tokyo/en/): ​Optimizing Swift code for separation of concerns and simplicity
+Separating concerns in code is often seen as a premature optimization when code doesn’t need to be reused, but it has huge implications in our ability to comprehend what code does. Let’s explore examples of this in Swift in what I like to call “separating what code does from how it does what it does”.
+- [Slides](https://speakerdeck.com/javisoto/try-swift-tokyo-2018-optimizing-swift-code-for-separation-of-concerns-and-simplicity)
+- [Video] TBD
